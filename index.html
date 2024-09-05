@@ -3,165 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CareerBoost: Perfect Resumes</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <title>CareerBoost - Resume Analyzer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation Header -->
-    <nav class="nav-header">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">
-                <img src="image/Logo.png" alt="CareerBoost Logo">
-            </a>
-            <button class="cta-button">Contact Us</button>
-        </div>
-    </nav>
-    
-    
+    <header class="nav-header">
+        <nav class="nav-container">
+                <img src="image/Logo.png" class="nav-logo" alt="Logo">
+ 
+        </nav>
+    </header>
 
-   <!-- HTML -->
-<section class="job-heroes-section">
-    <div class="job-heroes-container">
-        <div class="job-heroes-content">
-            <h2 class="job-heroes-title">
-                Not getting interviews with
-                <span class="job-heroes-emphasis">Your Resume?</span>
-            </h2>
-        </div>
-        <img src="image/cover.png" alt="Job Heroes" class="job-heroes-image">
-    </div>
-</section>
-    </section>
-
-    <!-- Resume Analyzer Section -->
-    <section class="resume-analyzer-section">
-        <div class="resume-analyzer-container">
-            <div class="title-area">
-                <h1>Upload Your Resume</h1>
-            </div>
-            <div class="main">
-                
-                <div class="file-upload">
-                    <input type="file" id="resume-file" accept=".pdf,.doc,.docx,.txt" onchange="updateFileName()">
-                    <label for="resume-file">Choose File</label>
-                    <div id="file-name">No file chosen</div>
+    <main>
+        <section class="job-heroes-section">
+            <div class="job-heroes-container">
+                <div class="job-heroes-content">
+                    <h2 class="job-heroes-title">Not getting interviews with <span class="job-heroes-emphasis">Your Resume?</span></h2>
                 </div>
-                <button onclick="analyzeResume()">Analyze Now</button>
-                <div id="analysis"></div>
+                <img src="image/cover.png" alt="Job Heroes" class="job-heroes-image">
             </div>
-            <div class="whatsapp-cta">
-                <h3>Need Help improving Your Resume?</h3>
-                <p>Get personalized assistance from our expert resume builders via WhatsApp!</p>
-                <a href="https://wa.me/+918129917227" class="whatsapp-button" onclick="contactWhatsApp()">Contact Us on WhatsApp</a>
-               
+        </section>
+
+        <section class="resume-analyzer-section">
+            <div class="resume-analyzer-container">
+                <div class="title-area">
+                    <h1>Upload Your Resume</h1>
+                </div>
+                <div class="main">
+                    <div class="file-upload">
+                        <input type="file" id="resume-file" accept=".pdf,.doc,.docx" hidden>
+                        <label for="resume-file">Choose File</label>
+                        <div id="file-name">No file chosen</div>
+                    </div>
+                    <button id="analyze-button">Analyze Now</button>
+                    <div id="analysis"></div>
+                </div>
+                <div class="whatsapp-cta">
+                    <h3>Need Help improving Your Resume?</h3>
+                    <p>Get personalized assistance from our expert resume builders via WhatsApp!</p>
+                    <a href="https://wa.me/+918129917227" class="whatsapp-button" onclick="contactWhatsApp()">Contact Us on WhatsApp</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <script>
-        // Function to update the file name when a file is selected
-        function updateFileName() {
-            var input = document.getElementById('resume-file');
-            var fileName = input.files[0] ? input.files[0].name : 'No file chosen';
-            document.getElementById('file-name').textContent = fileName;
-        }
-
-        // Function to analyze the uploaded resume
-        function analyzeResume() {
-            var fileInput = document.getElementById('resume-file');
-            var analysis = document.getElementById('analysis');
-            
-            if (fileInput.files.length === 0) {
-                alert('Please upload a resume file first.');
-                return;
-            }
-
-            var file = fileInput.files[0];
-            var reader = new FileReader();
-
-            reader.onload = function(e) {
-                var content = e.target.result;
+        <section class="job-search-insights">
+            <div class="insights-container">
                 
-                // Simulate analysis (replace with actual analysis in production)
-                var isATSOptimized = file.name.toLowerCase().includes('ats');
-                var totalPages = Math.floor(Math.random() * 4) + 1;
-                var educationSection = content.toLowerCase().includes('education');
-                var skillSection = content.toLowerCase().includes('skills');
-                var experienceSection = content.toLowerCase().includes('experience');
-                var shortlistChance = isATSOptimized ? Math.floor(Math.random() * 31) + 70 : Math.floor(Math.random() * 31);
+                <div class="insights-box painful-truth">
+                    <h3>The Painful Truth</h3>
+                    <ul>
+                        <li><span class="icon">✕</span> 75% of resumes are rejected by ATS before human eyes</li>
+                       
+                        <li><span class="icon">✕</span> Hence majority of the job seekers are eliminated at the initial resume filtering.</li>
+                    </ul>
+                </div>
+                <div class="insights-box jobsocial-advantage">
+                    <h3>How we can help</h3>
+                    <ul>
+                        <li><span class="icon">✓</span> Resume Building that helps you get shortlisted by recruiters</li>
+                        <li><span class="icon">✓</span> Linkedin Optimization to get more visibility</li>
 
-                var atsExplanation = isATSOptimized 
-                    ? "Your resume appears to be optimized for Applicant Tracking Systems (ATS). This increases your chances of passing initial screenings."
-                    : "Your resume may not be fully optimized for Applicant Tracking Systems (ATS). This could result in your application being overlooked by automated screening processes.";
+                    </ul>
+                </div>
+            </div>
+        </section>
+   
+        <footer class="footer-wrapper">
+            <div class="footer-container">
+              <div class="footer-content">
+                <div class="footer-mission">
+                  <h3>Our Mission</h3>
+                  <p>At CareerBoost, we're dedicated to helping job seekers land their dream roles by crafting resumes that stand out and get results.</p>
+               
+                </div>
+                <div class="footer-community">
+                  <h3>Our Community</h3>
+                  <p>Get daily job search tips, resume advice, and exclusive opportunities!</p>
+                  <a href="https://wa.me/+918129917227" class="footer-whatsapp-button" onclick="contactWhatsApp()">
+                    WhatsApp Community
+                  </a>
+                </div>
+              </div>
+              <div class="footer-bottom">
+                <p>&copy; 2024 CareerBoost. All rights reserved.</p>
+                <div class="footer-links">
+                  <a href="#">Privacy Policy</a>
+                  <a href="#">Terms of Service</a>
+                  <a href="#">Contact Us</a>
+                </div>
+              </div>
+            </div>
+          </footer>
+   
+   
+   
+    </main>
 
-                var shortlistExplanation = isATSOptimized
-                    ? "Your ATS-optimized resume significantly improves your chances of getting shortlisted. However, there's always room for improvement in a competitive job market."
-                    : "Your current resume might not stand out enough in a competitive job market. Consider revisiting your content and formatting to improve your chances.";
-
-                // Generate analysis HTML
-                analysis.innerHTML = `
-                    <h3>Resume Analysis:</h3>
-                    <div class="analysis-item">
-                        <span>1. Resume Name:</span> ${file.name}
-                    </div>
-                    <div class="analysis-item">
-                        <span>2. Total Pages:</span> ${totalPages} ${totalPages > 2 ? '<span class="bad">(Bad: More than 2 pages)</span>' : '<span class="good">(Good)</span>'}
-                    </div>
-                    <div class="analysis-item">
-                        <span>3. ATS Optimized:</span> ${isATSOptimized ? '<span class="good">Yes</span>' : '<span class="bad">Not Optimized</span>'}
-                        <div class="explanation">${atsExplanation}</div>
-                    </div>
-                    <div class="analysis-item">
-                        <span>4. Sections:</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;Education: ${educationSection ? '<span class="good">Yes</span>' : '<span class="bad">No</span>'}<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;Skills: ${skillSection ? '<span class="good">Yes</span>' : '<span class="bad">No</span>'}<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;Experience: ${experienceSection ? '<span class="good">Yes</span>' : '<span class="bad">No</span>'}
-                    </div>
-                    <div class="analysis-item">
-                        <span>5. Chance of Getting Shortlisted:</span> <span class="${isATSOptimized ? 'good' : 'bad'}">${shortlistChance}%</span>
-                        <div class="explanation">${shortlistExplanation}</div>
-                    </div>
-                `;
-            };
-
-            reader.readAsText(file);
-        }
-
-        // Function to handle WhatsApp contact (placeholder)
-        function contactWhatsApp() {
-            // In a real implementation, this would open WhatsApp with a pre-filled message
-            alert('Connecting to WhatsApp... In a real implementation, this would open a chat with our resume experts.');
-        }
-    </script>
-
-<!-- Job Search Insights Section -->
-<section class="job-search-insights">
-    <div class="insights-container">
-        <h2 class="insights-title">Why Your Job Search Is Failing</h2>
-        
-        <div class="insights-box painful-truth">
-            <h3>The Painful Truth:</h3>
-            <ul>
-                <li><span class="icon">✕</span> 75% of resumes are rejected by ATS before human eyes</li>
-                <li><span class="icon">✕</span> Hiring managers spend just 7.4 seconds per resume</li>
-                <li><span class="icon">✕</span> 98% of job seekers are eliminated at the initial resume screening</li>
-            </ul>
-        </div>
-        
-        <div class="insights-box jobsocial-advantage">
-            <h3>The JobSocial Advantage:</h3>
-            <ul>
-                <li><span class="icon">✓</span> AI-powered resume optimization beats ATS every time</li>
-                <li><span class="icon">✓</span> Direct access to hiring managers, skipping the line</li>
-                <li><span class="icon">✓</span> Personalized job matches delivered to your inbox daily</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-
+    <script src="script.js"></script>
 </body>
 </html>
