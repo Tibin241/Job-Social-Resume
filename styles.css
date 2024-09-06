@@ -6,16 +6,21 @@ body {
 }
 
 .nav-container {
-  background: linear-gradient(to right, #FF6D75, #F65734);
+  
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 14px;
 }
 
-.nav-logo {
-  width: 160px;
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  
 }
 
 .cta-button {
@@ -49,7 +54,7 @@ body {
 }
 
 .job-heroes-content {
-  text-align: center;
+  text-align: center;ßßß
   margin-bottom: 30px;
 }
 
