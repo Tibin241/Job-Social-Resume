@@ -66,10 +66,10 @@ body {
 
 .job-heroes-title {
   font-size: 36px;
-  font-weight: 400;
+  font-weight: 500;
   margin-bottom: 20px;
   text-align: center;
-  line-height: 1.5;
+  line-height: 1.4;
   color: #989898;
 }
 
@@ -77,6 +77,13 @@ body {
   color: #ff6868;
   font-weight: 700;
 }
+
+
+
+
+
+
+
 
 .resume-analyzer-section {
   background: linear-gradient(to right, #FF6D75, #F65734);
@@ -86,7 +93,7 @@ body {
 
 .resume-analyzer-container {
   padding: 140px 32px;
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
   width: 100%;
 }
@@ -98,7 +105,7 @@ body {
 
 .title-area h1 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 30px;
   font-weight: 400;
   color: #ffffff;
 }
@@ -166,9 +173,9 @@ button:hover {
 }
 
 #analysis {
-  margin-top: 18px;
-  padding: 18px;
-  background-color: rgb(255, 235, 235);
+  margin-top: 20px;
+  padding: 26px;
+  background-color: rgb(255, 230, 230);
   border-radius: 10px;
   color: #333333;
   
@@ -199,6 +206,15 @@ button:hover {
 .whatsapp-button:hover {
   background-color: #387c73;
 }
+
+
+
+
+
+
+
+
+
 
 .job-search-insights {
   background-color: #ffffff;
@@ -282,8 +298,8 @@ button:hover {
 
 .footer-container {
   margin: 0 auto;
-  margin-left: 16px;
-  margin-right: 16px;
+  margin-left: 10px;
+  margin-right: 10px;
   background: linear-gradient(to right, #FF6D75, #F65734);
   border-radius: 20px 20px 0 0;
   padding: 40px;
