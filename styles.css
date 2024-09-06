@@ -1,106 +1,93 @@
 body {
   font-family: "Sora", sans-serif;
-  line-height: 1.5;
+  line-height: 1.6;
   margin: 0;
   padding: 0;
 }
 
+:root {
+  --main-gradient: linear-gradient(to right, #FF6D75, #F65734);
+}
+
+/* Navigation Bar Styles */
+.navbar {
+  background: var(--main-gradient);
+  padding: 12px 0;
+  opacity: 95%;
+  position:relative;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
 
 .logo {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  
-}
-
-.cta-button {
-  background: #ffe0e0;
-  font-family: sora;
-  color: #dc5757;
-  width: 160px;
-  border: none;
-  border-radius: 10px;
-  font-weight: 400;
-  cursor: pointer;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-
-
-
-.landing-section {
-  background: linear-gradient(to right, #FF6D75, #F65734);
-  padding: 80px 38px 160px;
-  color: #1f1515;
-  display: flex;
   align-items: center;
 }
 
-.landing-container {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.logo-image {
+  height: 22px;
+  width: auto;
 }
 
-.landing-content {
-  text-align: center;ßßß
-  margin-bottom: 30px;
-}
-
-
-.landing-title {
-  font-size: 48px;
-  font-weight: 500;
-  margin-bottom: 42px;
-  text-align: center;
-  line-height: 1.4;
-  color: #ffc7c7;
-}
-
-.landing-image {
-  max-width: 900px;
-  max-height: 800px;
-  min-width: 300px;
-  min-height: 200px;
-  width: 100%;
-  height: auto;
-  border-radius: 32px;
-}
-
-
-.landing-emphasis {
+.nav-cta-button {
+  background-color: transparent;
   color: #ffffff;
-  font-weight: 700;
+  border: 2px solid #ffffff;
+  padding: 6px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
+.nav-cta-button:hover {
+  background-color: #ffffff;
+  color: #F65734;
+}
 
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+  .navbar {
+    padding: 15px 0;
+  }
 
+  .navbar-container {
+    padding: 0 30px;
+  }
 
+  .logo-image {
+    height: 32px;
+  }
 
+  .nav-cta-button {
+    padding: 8px 20px;
+    font-size: 16px;
+  }
+}
 
-
-
-
-
-
-
-
-
-
+/* Job Heroes Section Styles */
 .job-heroes-section {
-  padding: 80px 24px 160px;
-  color: #1f1515;
-  display: flex;
-  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 140px;
+  padding-right: 32px;
+  padding-left: 32px;
+  background-color: #ffffff;
 }
 
 .job-heroes-container {
+  max-width: 1200px;
+
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -108,27 +95,16 @@ body {
 }
 
 .job-heroes-content {
+  text-align: center;
   margin-bottom: 30px;
 }
 
-.job-heroes-image {
-  max-width: 1200px;
-  max-height: 800px;
-  min-width: 300px;
-  min-height: 200px;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  border-radius: 20px;
-}
-
 .job-heroes-title {
-  font-size: 38px;
+  font-size: 28px;
   font-weight: 500;
   margin-bottom: 20px;
-  text-align: center;
   line-height: 1.4;
-  color: #989898;
+  color: #333;
 }
 
 .job-heroes-emphasis {
@@ -136,11 +112,68 @@ body {
   font-weight: 700;
 }
 
+.job-heroes-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
 
+}
 
+@media (min-width: 480px) {
+  .job-heroes-title {
+    font-size: 42px;
+  }
+}
 
+@media (min-width: 768px) {
+  .job-heroes-section {
+    padding: 60px 30px;
+  }
 
+  .job-heroes-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 
+  .job-heroes-content {
+    width: 45%;
+    text-align: left;
+    padding-left: 20px;
+    order: 2;
+  }
+
+  .job-heroes-image {
+    width: 50%;
+    max-width: 500px;
+    order: 1;
+  }
+
+  .job-heroes-title {
+    font-size: 36px;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1024px) {
+  .job-heroes-section {
+    padding: 80px 40px;
+  }
+
+  .job-heroes-title {
+    font-size: 42px;
+  }
+
+  .job-heroes-image {
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .job-heroes-title {
+    font-size: 55px;
+  }
+}
 
 
 .resume-analyzer-section {
@@ -151,7 +184,7 @@ body {
 
 .resume-analyzer-container {
   padding: 140px 32px;
-  max-width: 700px;
+  max-width: 580px;
   margin: 0 auto;
   width: 100%;
 }
@@ -171,7 +204,7 @@ body {
 .main {
   background: #FFFFFF;
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 1px;
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
   color: #333333;
 }
