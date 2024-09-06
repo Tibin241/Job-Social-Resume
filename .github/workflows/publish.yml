@@ -3,11 +3,13 @@ name: Deploy to Hostinger
 on:
   push:
     branches:
-      - main # or your default branch name
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -16,7 +18,7 @@ jobs:
         uses: s0/git-publish-subdir-action@develop
         env:
           REPO: self
-          BRANCH: build # The branch name where you want to push the assets
-          FOLDER: . # The directory where your static files are (. means root directory)
+          BRANCH: main
+          FOLDER: .
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          MESSAGE: "Build: ({sha}) {msg}"
+          MESSAGE: "Deploy: ({sha}) {msg}"
