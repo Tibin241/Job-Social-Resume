@@ -6,7 +6,7 @@ body {
 }
 
 :root {
-  --main-gradient: linear-gradient(to right, #FF6D75, #F65734);
+  --main-gradient: linear-gradient(to right, #8150ba, #592e8a );
 }
 
 /* Navigation Bar Styles */
@@ -40,7 +40,7 @@ body {
 
 .nav-cta-button {
   background-color: transparent;
-  color: #ffffff;
+  color: #fbfbfb;
   border: 2px solid #ffffff;
   padding: 6px 12px;
   border-radius: 10px;
@@ -82,7 +82,7 @@ body {
   padding-bottom: 120px;
   padding-right: 32px;
   padding-left: 32px;
-  background-color: #ffffff;
+  background: var(--main-gradient);
 }
 
 .job-heroes-container {
@@ -101,14 +101,14 @@ body {
 
 .job-heroes-title {
   font-size: 32px;
-  font-weight: 500;
+  font-weight: 300;
   margin-bottom: 20px;
   line-height: 1.4;
-  color: #333;
+  color: #ffffff;
 }
 
 .job-heroes-emphasis {
-  color: #ff6868;
+  color: #dfa7fb;
   font-weight: 700;
 }
 
@@ -177,7 +177,7 @@ body {
 
 
 .resume-analyzer-section {
-  background: linear-gradient(to right, #FF6D75, #F65734);
+  background: #ffffff;
   display: flex;
   align-items: center;
 }
@@ -198,15 +198,15 @@ body {
   margin: 0;
   font-size: 24px;
   font-weight: 500;
-  color: #ffffff;
+  color: #8b8a8a;
 }
 
 .main {
-  background: #FFFFFF;
+  background: var(--main-gradient);
   padding: 30px;
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
-  color: #333333;
+
 }
 
 .file-upload {
@@ -221,10 +221,10 @@ body {
 .file-upload label {
   display: inline-block;
   padding: 12px 30px;
-  background-color: #ffffff;
-  border: 3px solid #e57878;
-  color: #e54e4e;
-  border-radius: 20px;
+
+  border: 3px solid #ffffff;
+  color: #ffffff;
+  border-radius: 12px;
   cursor: pointer;
   font-weight: 500;
   transition: background-color 0.3s ease;
@@ -238,21 +238,21 @@ body {
   margin-top: 10px;
   font-style: italic;
   font-weight: 300;
-  color: #666666;
+  color: #be9ccd;
 }
 
 button {
   display: block;
   margin-top: 20px;
   width: 100%;
-  height: 52px;
-  padding: 12px;
-  background: linear-gradient(to right, #FF6D75, #F65734);
+  
+  padding: 18px;
+  background: #ffffff;
   font-weight: 400;
   font-size: 18px;
-  color: #FFFFFF;
+  color: #4d387c;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   cursor: pointer;
   font-family: 'Space Grotesk', sans-serif;
   transition: background-color 0.3s ease;
@@ -264,10 +264,10 @@ button:hover {
 }
 
 #analysis {
-  margin-top: 8px;
+  margin-top: 12px;
   padding: 28px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 8px;
+  background-color: rgb(243, 235, 255);
+  border-radius: 12px;
   color: #333333;
   
 }
@@ -276,18 +276,19 @@ button:hover {
   text-align: center;
   margin-top: 40px;
   padding: 30px;
-  background-color: #ffffff;
+  background: var(--main-gradient);
   border-radius: 10px;
-  color: #000000;
+  color: #ffffff;
 }
 
 .whatsapp-button {
   background-color: #02ba67;
   color: #ffffff;
-  padding: 20px 10px;
+  padding: 16px 16px;
+
   width: 90%;
   text-decoration: none;
-  border-radius: 10px;
+  border-radius: 12px;
   display: inline-block;
   margin-top: 15px;
   font-weight: 500;
@@ -300,84 +301,163 @@ button:hover {
 
 
 
-
-
-
-
-
-
-
-.job-search-insights {
-  background-color: #ffffff;
-  padding: 60px 40px;
-  color: #333333;
+.career-toolbox-section {
+  background: var(--main-gradient);
+  padding-top: 8px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 120px;
 }
 
-.insights-container {
-  max-width: 800px;
+.toolbox-container {
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
-
-
-.insights-box {
-  
-  border-radius: 10px;
-  margin-bottom: 60px;
-
+.toolbox-title {
+  font-size: 42px;
+  font-weight: 500;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-.insights-box h3 {
-  font-size: 32px;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: #F65734
-}
-
-.insights-box ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.insights-box li {
-  margin-bottom: 15px;
-  font-size: 20px;
+.toolbox-features {
   display: flex;
-  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.insights-box .icon {
-  margin-right: 10px;
-  font-weight: bold;
+.feature-column {
+  flex-basis: 30%;
+  text-align: center;
+  color: #ffffff;
 }
 
-.painful-truth {
-  background-color: #ffffff;
+.icon-placeholder {
+  /* Style your icon placeholder */
 }
 
-.painful-truth .icon {
-  color: #D32F2F;
+.feature-column h3 {
+  font-size: 24px;
+  margin: 20px 0 10px;
 }
 
-.jobsocial-advantage {
-  background-color: #ffffff;
+.feature-column p {
+  font-size: 16px;
+  line-height: 1.6;
 }
 
-.jobsocial-advantage .icon {
-  color: #388E3C;
-}
-
-@media (min-width: 768px) {
-  .job-heroes-title {
-      font-size: 3.5rem;
+@media (max-width: 768px) {
+  .feature-column {
+    flex-basis: 100%;
+    margin-bottom: 30px;
   }
 }
 
-@media (min-width: 1024px) {
-  .job-heroes-title {
-      font-size: 4rem;
+
+
+
+.resume-solution-section {
+  background-color: #ffffff;
+  padding: 60px 0;
+  font-family: "Sora", sans-serif;
+}
+
+.solution-container {
+  max-width: 1200px;
+  margin: 60px;
+  padding: 0 px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.solution-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.solution-title {
+  font-size: 42px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.solution-description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #666666;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  background: var(--main-gradient);
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #edd7ff;
+}
+
+.cta-subtext {
+  font-size: 14px;
+  color: #888888;
+  margin-top: 10px;
+}
+
+.solution-image {
+  flex: 1;
+  max-width: 500px;
+  margin-left: 40px;
+}
+
+.solution-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .solution-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .solution-content {
+    max-width: 100%;
+  }
+
+  .solution-image {
+    display: none;
+  }
+
+  .solution-title {
+    font-size: 32px;
+  }
+
+  .solution-description {
+    font-size: 16px;
+  }
+
+  .cta-button {
+    width: 100%;
   }
 }
+
+
+
+
 
 
 
@@ -391,7 +471,7 @@ button:hover {
   margin: 0 auto;
   margin-left: 10px;
   margin-right: 10px;
-  background: linear-gradient(to right, #FF6D75, #F65734);
+  background:var(--main-gradient);
   border-radius: 20px 20px 0 0;
   padding: 40px;
   color: #ffffff;
@@ -438,7 +518,7 @@ button:hover {
 
 .cta-button {
   background-color: #ffffff;
-  color: #F65734;
+  color: #ffffff;
   border: none;
 }
 
