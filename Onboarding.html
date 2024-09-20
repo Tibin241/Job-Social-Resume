@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onboarding</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css_onboarding.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <button class="back-button">←</button>
+        </div>
+
+        <div id="screenContainer" role="main">
+            <div class="screen" data-screen="1">
+                <h1>When do you want to <span class="highlight">Move in?</span></h1>
+                <p>Tell us your expectations</p>
+                <div class="button-group">
+                    <button class="button secondary">ASAP: 1-2 Days</button>
+                    <button class="button secondary">Soon: 1-2 Weeks</button>
+                    <button class="button secondary">Planning: 1-2 Months</button>
+                </div>
+            </div>
+
+            <div class="screen" data-screen="2" style="display: none;">
+                <h1>What are you <span class="highlight">Looking For?</span></h1>
+                <p>Tell us what you want</p>
+                <div class="button-group">
+                    <button class="button secondary">Flat with a Flatmate</button>
+                    <button class="button secondary">Flat only for Myself</button>
+                </div>
+                <p>Tell us your preferences</p>
+                <div class="preference-group">
+                    <button class="preference-button">1 BHK</button>
+                    <button class="preference-button">2 BHK</button>
+                    <button class="preference-button">3 BHK</button>
+                </div>
+            </div>
+
+            <div class="screen" data-screen="3" style="display: none;">
+                <h1>Where do you want to <span class="highlight">Stay?</span></h1>
+                <p>Which all locations are fine for you?</p>
+                <div class="location-input-container">
+                    <input type="text" id="locationInput" placeholder="Enter location">
+                    <button class="button primary" id="addLocationBtn">Add</button>
+                </div>
+                <div id="locationTags" class="preference-group"></div>
+            </div>
+
+            <div class="screen" data-screen="4" style="display: none;">
+                <h1>What are your <span class="highlight">Preferences?</span></h1>
+                <p>What all do you resonate with?</p>
+                <div class="preference-group">
+                    <button class="preference-button">Pet Friendly</button>
+                    <button class="preference-button">Non-Smoker</button>
+                    <button class="preference-button">No Owner Restrictions</button>
+                    <button class="preference-button">Clean</button>
+                    <button class="preference-button">Vegetarian</button>
+                    <button class="preference-button">Late-Night</button>
+                    <button class="preference-button">Couple Friendly</button>
+                    <button class="preference-button">Quiet</button>
+                </div>
+            </div>
+
+            <div class="screen" data-screen="5" style="display: none;">
+                <h1>Thank You for <span class="highlight">Signing Up!</span></h1>
+                <p>We're excited to have you on board.</p>
+                <div class="button-group">
+                    <button class="button primary" id="signInButton">Sign In with Your Number</button>
+                </div>
+                <p class="login-text">Already a User? <span class="login-link" id="loginLink">LOGIN</span></p>
+            </div>
+
+            <div class="screen" data-screen="6" style="display: none;">
+                <div class="login-box">
+                  <h1>Sign Up with Your <span class="highlight">Number</span></h1>
+                  <form id="signUpForm">
+                    <input type="text" id="firstName" placeholder="First Name" required>
+                    <input type="text" id="lastName" placeholder="Last Name" required>
+                    <div class="phone-input">
+                      <select id="countryCode">
+                        <option value="+91">🇮🇳 +91</option>
+                        <option value="+1">🇺🇸 +1</option>
+                        <option value="+44">🇬🇧 +44</option>
+                        <option value="+61">🇦🇺 +61</option>
+                        <option value="+81">🇯🇵 +81</option>
+                        <option value="+49">🇩🇪 +49</option>
+                        <option value="+33">🇫🇷 +33</option>
+                        <option value="+39">🇮🇹 +39</option>
+                        <option value="+55">🇧🇷 +55</option>
+                        <option value="+86">🇨🇳 +86</option>
+                      </select>
+                      <input type="tel" id="phoneNumber" placeholder="Phone Number" required>
+                    </div>
+                    <button type="submit" class="button primary">Sign Up</button>
+                  </form>
+                </div>
+              </div>
+            
+              <div class="screen" data-screen="7" style="display: none;">
+                <div class="login-box">
+                  <h1><span class="highlight">Login</span> to Your Account</h1>
+                  <form id="loginForm">
+                    <div class="phone-input">
+                      <select id="loginCountryCode">
+                        <option value="+91">🇮🇳 +91</option>
+                        <option value="+1">🇺🇸 +1</option>
+                        <option value="+44">🇬🇧 +44</option>
+                        <option value="+61">🇦🇺 +61</option>
+                        <option value="+81">🇯🇵 +81</option>
+                        <option value="+49">🇩🇪 +49</option>
+                        <option value="+33">🇫🇷 +33</option>
+                        <option value="+39">🇮🇹 +39</option>
+                        <option value="+55">🇧🇷 +55</option>
+                        <option value="+86">🇨🇳 +86</option>
+                      </select>
+                      <input type="tel" id="loginPhoneNumber" placeholder="Phone Number" required>
+                    </div>
+                    <button type="submit" class="button primary">Login</button>
+                  </form>
+                </div>
+              </div>
+              
+              <div class="screen" data-screen="8" style="display: none;">
+                <div class="welcome-box">
+                  <h1>Welcome <span id="userFullName" class="highlight"></span></h1>
+                  <p id="welcomeMessage">We will Soon Connect With You On your Registered mobile number.</p>
+                </div>
+              </div>
+
+        <div class="footer">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <button class="next-button">Next</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
